@@ -14,8 +14,24 @@
  * console.log('fizz')
  * console.log(4)
  * console.log('buzz')
+ * 
+ * % modulo divided by number for for example 3 and 4 will return 1 or 6 will return 0
  */
 
-function fizzBuzz(n: number) {}
+function fizzBuzz(n: number) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzbuzz");
+        }
+        else if (i % 3 === 0) {
+            console.log("fizz");
+        }
+        else if (i % 5 === 0) {
+            console.log("buzz");
+        }else {
+            console.log(i);
+        }
+    }
+}
 
 export { fizzBuzz };
