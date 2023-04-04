@@ -19,6 +19,15 @@
  *            '####'
  */
 
-function steps(n: number) {}
+function steps(n: number) {
+    const symbol = "#";
+    const space = " ";
+    let spaceCount = n - 1;
+
+    for (let i = 0; i < n; i++){
+        console.log(symbol.repeat(i + 1) + space.repeat(spaceCount))
+        spaceCount = spaceCount -1
+    }
+}
 
 export { steps };

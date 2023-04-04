@@ -15,11 +15,21 @@
  */
 
 class Stack {
-  push(n: number) {}
+  private store: number[] = []
 
-  pop() {}
+  push(n: number): void {
+    this.store.push(n);
+  }
 
-  peek() {}
+  pop() {
+    const numberToBeOut = this.store[this.store.length - 1]
+    this.store.splice(this.store.length - 1, 1)
+    return numberToBeOut;
+  }
+
+  peek() {
+    return this.store[this.store.length - 1];
+  }
 }
 
 export { Stack };
