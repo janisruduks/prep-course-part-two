@@ -1,5 +1,6 @@
 import { Matrix } from "./index";
 
+
 describe("Matrix", () => {
   test("extract row from one number matrix", () => {
     expect(new Matrix("1").rows[0]).toEqual([1]);

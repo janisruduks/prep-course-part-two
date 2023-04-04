@@ -1,3 +1,4 @@
+
 /**
  * Matrix
  * Given a string representing a matrix of numbers, return the rows and columns of that matrix.
@@ -32,17 +33,44 @@
  *     9, 5, 6
  *     8, 3, 6
  *     7, 2, 7
+ * 
+ * 
+ * https://postimg.cc/dDYY9wFP
  */
-
 class Matrix {
   constructor(private matrix: string) {}
 
-  get rows() {
-    return [];
+  get rows(): number[][] {
+    let matrixCleaned = this.matrix.replace(/\n/g, "  ").split(/\s/);
+    let row = [];
+    let backupRow = [];
+
+    for(let i = 0; i < matrixCleaned.length; i++) {
+      if(matrixCleaned[i] !== "") {
+        backupRow.push(parseInt(matrixCleaned[i]));
+      }else {
+        row.push(backupRow);
+        backupRow = [];
+      }
+    }
+
+    row.push(backupRow)
+    return row;
   }
 
-  get columns() {
-    return [];
+  get columns(): number[][] {
+    let rows = this.rows;
+    let columns: any[] = [];
+
+    for(let i = 0; i < rows[0].length; i++) {
+      columns.push([]);
+
+        for(let j = 0; j < rows.length; j++) {
+          columns[i].push(rows[j][i]);
+        }
+    }
+
+    return columns;
   }
 }
 
