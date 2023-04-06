@@ -19,7 +19,7 @@
  *            '####'
  */
 
-function steps(n: number) {
+function steps(n: number): void {
     const symbol = "#";
     const space = " ";
     let spaceCount = n - 1;

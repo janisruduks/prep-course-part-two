@@ -16,7 +16,7 @@
  *              '#####'
  */
 
-function pyramid(n: number) {
+function pyramid(n: number): void {
   const symbol = "#";
   const space = " ";
   let numberForSpace = n - 1;

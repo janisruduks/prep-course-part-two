@@ -43,7 +43,7 @@ class PhoneNumber {
     this.input = input
   }
 
-  number() {
+  number(): string | null {
     let cleanedNumber = this.input.replace(/\D/g, '');
     if (cleanedNumber.length <= 9 || cleanedNumber.length >= 12){
       return null
@@ -59,7 +59,8 @@ class PhoneNumber {
       && cleanedNumber[3] !== "1" && cleanedNumber[3] !== "0"){
         return cleanedNumber
       }
-      return null;
+
+    return null;
     }
   }
 }

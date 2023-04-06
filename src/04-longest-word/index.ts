@@ -12,7 +12,7 @@
  * longestWord("fun&!! time") === "time"
  */
 
-function longestWord(str: string) {
+function longestWord(str: string): string {
     const arr = str.split(" ");
     let arrayString = "";
     let longestWord = "";

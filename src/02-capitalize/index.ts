@@ -11,7 +11,7 @@
  * capitalize('look, it is working!') === 'Look, It Is Working!'
  */
 
-function capitalize(str: string) {
+function capitalize(str: string): string {
     const space = " ";
     let finishedString = "";
     let arr = str.split(space);

@@ -36,6 +36,7 @@
  * 
  * 
  * https://postimg.cc/dDYY9wFP
+ * maybe could be improoved with reducer
  */
 class Matrix {
   constructor(private matrix: string) {}

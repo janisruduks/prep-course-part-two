@@ -13,15 +13,15 @@ class HighScores {
     this.scores = scores;
   }
 
-  get latest() {
+  get latest(): number {
     return this.scores[this.scores.length - 1];
   }
 
-  get personalBest() {
+  get personalBest(): number {
     return Math.max(...this.scores);
   }
 
-  get personalTopThree() {
+  get personalTopThree(): number[] {
     let bestThree = this.scores.slice()
     bestThree.sort((a, b) => b - a);
     bestThree = bestThree.slice(0, 3);

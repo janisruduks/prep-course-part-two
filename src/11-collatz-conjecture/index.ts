@@ -24,7 +24,7 @@
  * Resulting in 9 steps. So for input n = 12, the return value would be 9.
  */
 
-function steps(number: number) {
+function steps(number: number): number {
     let steps = 0;
 
     if (number <= 0){

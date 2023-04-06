@@ -15,13 +15,11 @@
 class Queue {
   store: number[] = []
 
-
-
-  add(n: number) {
+  add(n: number): void {
     this.store.push(n)
   }
 
-  remove() {
+  remove(): any {
     return this.store.shift()
   }
 }

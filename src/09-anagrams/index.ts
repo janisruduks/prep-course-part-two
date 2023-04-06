@@ -12,7 +12,7 @@
  * anagrams('Hi there', 'Bye there') === false
  */
 
-function anagrams(stringA: string, stringB: string) {
+function anagrams(stringA: string, stringB: string): Boolean {
     stringA = stringA.replace(/[^a-zA-Z]/g, "").toLowerCase();
     stringB = stringB.replace(/[^a-zA-Z]/g, "").toLowerCase();
 

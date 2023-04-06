@@ -21,13 +21,13 @@ class Stack {
     this.store.push(n);
   }
 
-  pop() {
+  pop(): number {
     const numberToBeOut = this.store[this.store.length - 1]
     this.store.splice(this.store.length - 1, 1)
     return numberToBeOut;
   }
 
-  peek() {
+  peek(): number {
     return this.store[this.store.length - 1];
   }
 }

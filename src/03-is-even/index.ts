@@ -10,7 +10,7 @@
  * isEven(3) === false
  */
 
-function isEven(num: number) {
+function isEven(num: number): Boolean {
     if(!Number.isInteger(num)){
         num = parseInt(num.toString())
     }
@@ -19,12 +19,8 @@ function isEven(num: number) {
     let numberString = num.toString();
     const length = numberString.length;
     numberString = numberString.charAt(length - 1)
-    
-    if (array.includes(numberString)) {
-        return true; // even
-    }else {
-        return false; // odd
-    }
+
+    return array.includes(numberString); 
 }
 
 

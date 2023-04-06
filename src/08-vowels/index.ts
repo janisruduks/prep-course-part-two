@@ -9,7 +9,7 @@
  * vowels('Hello there!') === 4
  */
 
-function vowels(str: string) {
+function vowels(str: string): number {
     const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
 

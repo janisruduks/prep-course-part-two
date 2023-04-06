@@ -10,14 +10,14 @@
  * 
  */
 
-function parse(input: string) {
+function parse(input: string): string {
     let acronym = ""
     let arr = input.split(/[ -]/); // for annoying words
     
     arr = arr.filter((str: string) => str !== "");
     for (let i = 0; i < arr.length; i++) {
-        let cleanString = arr[i].replace(/[^a-zA-Z]/g, "")
-        let splittedArr = cleanString.charAt(0);
+        const cleanString = arr[i].replace(/[^a-zA-Z]/g, "")
+        const splittedArr = cleanString.charAt(0);
         acronym = acronym + splittedArr;
     }
     return acronym.toUpperCase();
