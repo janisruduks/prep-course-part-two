@@ -63,11 +63,11 @@ class Matrix {
     let rows = this.rows;
     let columns: any[] = [];
 
-    for(let i = 0; i < rows[0].length; i++) {
+    for(let columnIndex = 0; columnIndex < rows[0].length; columnIndex++) {
       columns.push([]);
 
-        for(let index = 0; index < rows.length; index++) {
-          columns[i].push(rows[index][i]);
+        for(let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+          columns[columnIndex].push(rows[rowIndex][columnIndex]);
         }
     }
 

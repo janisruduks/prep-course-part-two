@@ -20,7 +20,7 @@
 class Words {
 
   count(str: string): { [key: string]: number } {
-    const wordsArray = str.toLowerCase().split(/\s/).filter(Boolean); 
+    const wordsArray = str.toLowerCase().split(/\s/g).filter(Boolean); 
     const wordCount = wordsArray.reduce((acc: { [key: string]: number }, word) => {
       acc[word] = acc[word] ? acc[word] + 1 : 1;
       return acc;
