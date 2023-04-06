@@ -65,8 +65,8 @@ class Matrix {
     for(let i = 0; i < rows[0].length; i++) {
       columns.push([]);
 
-        for(let j = 0; j < rows.length; j++) {
-          columns[i].push(rows[j][i]);
+        for(let index = 0; index < rows.length; index++) {
+          columns[i].push(rows[index][i]);
         }
     }
 

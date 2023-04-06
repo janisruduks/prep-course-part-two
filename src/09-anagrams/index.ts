@@ -19,11 +19,7 @@ function anagrams(stringA: string, stringB: string) {
     const arrayA = stringA.split("").sort();
     const arrayB = stringB.split("").sort();
 
-    if(arrayA.every((value, index) => value === arrayB[index])) {
-        return true;
-    }else {
-        return false;
-    }
+    return arrayA.every((value, index) => value === arrayB[index]);
 }
 
 

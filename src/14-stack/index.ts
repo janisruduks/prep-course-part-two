@@ -15,7 +15,7 @@
  */
 
 class Stack {
-  private store: number[] = []
+  store: number[] = []
 
   push(n: number): void {
     this.store.push(n);

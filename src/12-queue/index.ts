@@ -13,7 +13,8 @@
  */
 
 class Queue {
-  private store: number[] = []
+  store: number[] = []
+
 
 
   add(n: number) {

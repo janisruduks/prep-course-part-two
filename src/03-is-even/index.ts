@@ -14,13 +14,13 @@ function isEven(num: number) {
     if(!Number.isInteger(num)){
         num = parseInt(num.toString())
     }
-    const arr = ["0", "2", "4", "6", "8"]; // numbers that end with these are even
+    const array = ["0", "2", "4", "6", "8"]; // numbers that end with these are even
 
     let numberString = num.toString();
     const length = numberString.length;
     numberString = numberString.charAt(length - 1)
     
-    if (arr.includes(numberString)) {
+    if (array.includes(numberString)) {
         return true; // even
     }else {
         return false; // odd

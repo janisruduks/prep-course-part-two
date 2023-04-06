@@ -18,8 +18,8 @@
  * % modulo divided by number for for example 3 and 4 will return 1 or 6 will return 0
  */
 
-function fizzBuzz(n: number) {
-    for (let i = 1; i <= n; i++) {
+function fizzBuzz(number: number) {
+    for (let i = 1; i <= number; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("fizzbuzz");
         }

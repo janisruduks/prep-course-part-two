@@ -12,11 +12,10 @@
 
 function parse(input: string) {
     let acronym = ""
-    let arr = input.split(/[ -]/);
+    let arr = input.split(/[ -]/); // for annoying words
     
     arr = arr.filter((str: string) => str !== "");
     for (let i = 0; i < arr.length; i++) {
-        console.log(arr)
         let cleanString = arr[i].replace(/[^a-zA-Z]/g, "")
         let splittedArr = cleanString.charAt(0);
         acronym = acronym + splittedArr;
