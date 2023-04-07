@@ -36,32 +36,32 @@
  * 
  * 
  * https://postimg.cc/dDYY9wFP
- * maybe could be improoved with reducer
  */
 class Matrix {
   constructor(private matrix: string) {}
 
   get rows(): number[][] {
-    let matrixCleaned = this.matrix.replace(/\n/g, "  ").split(/\s/);
-    let row = [];
-    let backupRow = [];
+    let matrixValues = this.matrix.replace(/\n/g, "  ").split(/\s/);
 
-    for(let i = 0; i < matrixCleaned.length; i++) {
-      if(matrixCleaned[i] !== "") {
-        backupRow.push(parseInt(matrixCleaned[i]));
+    const rows: number[][] = [];
+    let currentRow: number[] = [];
+    
+    for(let i = 0; i < matrixValues.length; i++) {
+      if(matrixValues[i] !== "") {
+        currentRow.push(parseInt(matrixValues[i]));
       }else {
-        row.push(backupRow);
-        backupRow = [];
+        rows.push(currentRow);
+        currentRow = [];
       }
     }
 
-    row.push(backupRow)
-    return row;
+    rows.push(currentRow)
+    return rows;
   }
 
   get columns(): number[][] {
-    let rows = this.rows;
-    let columns: any[] = [];
+    const rows = this.rows;
+    const columns: number[][] = [];
 
     for(let columnIndex = 0; columnIndex < rows[0].length; columnIndex++) {
       columns.push([]);

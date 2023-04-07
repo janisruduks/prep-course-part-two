@@ -40,24 +40,25 @@ class PhoneNumber {
   input: string;
   
   constructor(input: string) {
-    this.input = input
+    this.input = input;
   }
 
   number(): string | null {
-    let cleanedNumber = this.input.replace(/\D/g, '');
-    if (cleanedNumber.length <= 9 || cleanedNumber.length >= 12){
-      return null
+    let phoneNumber = this.input.replace(/\D/g, '');
+    
+    if (phoneNumber.length <= 9 || phoneNumber.length >= 12){
+      return null;
     }else {
-      if(cleanedNumber[0] === "1" && cleanedNumber.length === 11) {
-        cleanedNumber = cleanedNumber.substring(1)
+      if(phoneNumber[0] === "1" && phoneNumber.length === 11) {
+        phoneNumber = phoneNumber.substring(1);
       }
-      else if(cleanedNumber.length === 10){}
+      else if(phoneNumber.length === 10){}
       else{
         return null;
       }
-      if(cleanedNumber[0] !== "1" && cleanedNumber[0] !== "0" 
-      && cleanedNumber[3] !== "1" && cleanedNumber[3] !== "0"){
-        return cleanedNumber
+      if(phoneNumber[0] !== "1" && phoneNumber[0] !== "0" 
+      && phoneNumber[3] !== "1" && phoneNumber[3] !== "0"){
+        return phoneNumber;
       }
 
     return null;

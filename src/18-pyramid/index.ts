@@ -16,15 +16,16 @@
  *              '#####'
  */
 
-function pyramid(n: number): void {
-  const symbol = "#";
+function pyramid(number: number, symbol: string = "#"): void {
   const space = " ";
-  let numberForSpace = n - 1;
-  let numberForSymbol = 1;
-  for (let i = 0; i < n; i++) {
-    console.log(space.repeat(numberForSpace) + symbol.repeat(numberForSymbol) + space.repeat(numberForSpace));
-    numberForSpace = numberForSpace - 1;
-    numberForSymbol = numberForSymbol + 2;
+  let spaces = number - 1;
+  let symbols = 1;
+  
+  for (let i = 0; i < number; i++) {
+    console.log(`${space.repeat(spaces)}${symbol.repeat(symbols)}${space.repeat(spaces)}`);
+
+    spaces--;
+    symbols += 2;
   }
 }
 

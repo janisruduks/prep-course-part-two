@@ -14,7 +14,6 @@
 
 function longestWord(str: string): string {
     str = str.replace(/[^a-zA-z\s]/g, ""); 
-    
     const arr = str.split(" ");
     
     const longestWord = arr.reduce((longestValue, currentValue) => {
