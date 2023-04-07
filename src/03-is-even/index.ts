@@ -17,8 +17,7 @@ function isEven(num: number): Boolean {
     const array = ["0", "2", "4", "6", "8"]; // numbers that end with these are even
 
     let numberString = num.toString();
-    const length = numberString.length;
-    numberString = numberString.charAt(length - 1)
+    numberString = numberString.charAt(numberString.length - 1)
 
     return array.includes(numberString); 
 }
