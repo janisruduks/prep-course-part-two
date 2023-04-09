@@ -15,7 +15,7 @@ function vowels(str: string): number {
 
     for(let i = 0; i < str.length; i++) {
         if(vowels.includes(str[i].toLowerCase())){
-            count = count + 1;
+            count++;
         }
     }
     return count;

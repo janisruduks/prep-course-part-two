@@ -11,9 +11,9 @@
  */
 
 function reverse(str: string): string {
-    const split = str.split("");
-    let reverseArray = split.reverse();
-    return reverseArray.join("");
+    const splited = str.split("");
+    let reverseArray = splited.reverse().join("");
+    return reverseArray;
 }
 
 export { reverse };

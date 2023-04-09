@@ -8,14 +8,12 @@
  * maxChar("abcccccccd") === "c"
  * maxChar("apple 1231111") === "1"
  * 
- * 
- * NEED TO CHANGE TO REDUCER
  */
 
 function maxChar(str: string): string {
-  var store = 0
-  var current = 0;
-  var storeString = ""
+  let store = 0
+  let current = 0;
+  let storeString = ""
 
   for(let i = 0; i < str.length; i++){
     current = str.split(str[i]).length - 1;
