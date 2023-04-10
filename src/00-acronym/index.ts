@@ -11,9 +11,9 @@
  */
 
 function parse(input: string): string {
-  const array = input.split(/[ -]/);
-  const acronym = array.map((word) => {
-    return word = word.replace(/[^a-zA-Z]/g, "").charAt(0).toUpperCase();
+  const arrayInput = input.toUpperCase().split(/[ -]/);
+  const acronym = arrayInput.map((word) => {
+    return word.replace(/[^A-Z]/g, "").charAt(0);
   });
   return acronym.join("");
 }
