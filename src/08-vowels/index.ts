@@ -8,13 +8,13 @@
  * vowels('Adam') === 2
  * vowels('Hello there!') === 4
  */
+const VOVWELS: string[] = ['a', 'e', 'i', 'o', 'u'];
 
 function vowels(str: string): number {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
 
     for(let i = 0; i < str.length; i++) {
-        if(vowels.includes(str[i].toLowerCase())){
+        if(VOVWELS.includes(str[i].toLowerCase())){
             count++;
         }
     }

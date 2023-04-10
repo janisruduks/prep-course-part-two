@@ -14,9 +14,8 @@
  */
 
 function capitalize(str: string): string {
-  const arrayOfStrings = str.split(" ");
-  const capitalizedString = arrayOfStrings.map((word) => {
-    return word = word.replace(word[0], word[0].toUpperCase());
+  const capitalizedString = str.split(" ").map((word) => {
+    return word.replace(word[0], word[0].toUpperCase());
   });
   return capitalizedString.join(" ");
 }

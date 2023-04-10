@@ -19,15 +19,19 @@
 
 class Words {
   count(str: string): { [key: string]: number } {
+
     const wordsArray = str.toLowerCase().split(/\s/g).filter(Boolean); 
-    const wordCount = wordsArray.reduce((wordOccurrence: { [key: string]: number }, word) => {
-    if (wordOccurrence[word]) {
-      wordOccurrence[word]++;
+
+    const wordCount = wordsArray.reduce((word: { [key: string]: number }, count) => {
+    if (word[count]) {
+      word[count]++;
     } else {
-      wordOccurrence[word] = 1;
+      word[count] = 1;
     }
-      return wordOccurrence;
+      return word;
+
     }, Object.create(null));
+
     return wordCount;
   }
 }

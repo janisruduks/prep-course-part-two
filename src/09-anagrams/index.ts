@@ -13,8 +13,8 @@
  */
 
 function anagrams(stringA: string, stringB: string): Boolean {
-    stringA = stringA.replace(/[^a-zA-Z]/g, "").toLowerCase();
-    stringB = stringB.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    stringA = stringA.replace(/[^a-z]/gi, "").toLowerCase();
+    stringB = stringB.replace(/[^a-z]/gi, "").toLowerCase();
 
     const arrayA = stringA.split("").sort();
     const arrayB = stringB.split("").sort();

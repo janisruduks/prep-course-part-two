@@ -9,17 +9,18 @@
  * isEven(4) === true
  * isEven(3) === false
  */
+const EVEN_NUMBERS = [0, 2, 4, 6, 8];
 
 function isEven(num: number): Boolean {
     if(!Number.isInteger(num)){
         num = parseInt(num.toString())
     }
-    const array = ["0", "2", "4", "6", "8"]; // numbers that end with these are even
-
+    
+    const evenNumbers = EVEN_NUMBERS.toString()
     let numberString = num.toString();
-    numberString = numberString.charAt(numberString.length - 1)
+    numberString = numberString[numberString.length - 1]
 
-    return array.includes(numberString); 
+    return evenNumbers.includes(numberString); 
 }
 
 

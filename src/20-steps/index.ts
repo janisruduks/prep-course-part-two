@@ -19,8 +19,7 @@
  *            '####'
  */
 
-function steps(n: number, symbol: string = "#"): void {
-    const space = " ";
+function steps(n: number, symbol: string = "#", space: string = " "): void {
     let spaces = n - 1;
 
     for (let i = 0; i < n; i++){

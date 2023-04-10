@@ -22,7 +22,7 @@ class Stack {
   }
 
   pop(): number {
-    const numberToBeOut = this.store[this.store.length - 1]
+    const numberToBeOut = this.store[this.store.length - 1];
     this.store.splice(this.store.length - 1, 1)
     return numberToBeOut;
   }

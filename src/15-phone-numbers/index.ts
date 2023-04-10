@@ -40,19 +40,18 @@ class PhoneNumber {
   input: string;
   
   constructor(input: string) {
-    this.input = input;
+    this.input = input.replace(/\D/g, '');
   }
 
   number(): string | null {
-    let phoneNumber = this.input.replace(/\D/g, '');
+    let phoneNumber = this.input;
     
     if (phoneNumber.length <= 9 || phoneNumber.length >= 12){
       return null;
     }else {
       if(phoneNumber[0] === "1" && phoneNumber.length === 11) {
         phoneNumber = phoneNumber.substring(1);
-      }
-      else if(phoneNumber.length === 10){}
+      }else if(phoneNumber.length === 10){}
       else{
         return null;
       }

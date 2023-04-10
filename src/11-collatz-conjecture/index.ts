@@ -27,7 +27,7 @@
 function steps(number: number): number {
     let steps = 0;
 
-    if (number <= 0){
+    if (number <= 0){ // don't remove "=" or https://youtu.be/5aq3RJ7Udyw
         throw new Error("Only positive numbers are allowed");
     }
 

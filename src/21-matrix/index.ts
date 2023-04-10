@@ -41,7 +41,7 @@ class Matrix {
   constructor(private matrix: string) {}
 
   get rows(): number[][] {
-    let matrixValues = this.matrix.replace(/\n/g, "  ").split(/\s/);
+    const matrixValues = this.matrix.replace(/\n/g, "  ").split(/\s/);
 
     const rows: number[][] = [];
     let currentRow: number[] = [];

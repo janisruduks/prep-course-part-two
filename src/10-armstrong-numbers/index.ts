@@ -12,10 +12,10 @@
  */
 
 function validate(number: number): boolean {
-    let arrayOfNumber = Array.from(number.toString(), Number)
+    let numberArray = Array.from(number.toString(), Number)
     let sum = 0
-    for(let i = 0; i < arrayOfNumber.length; i++) {
-        sum = Math.pow(arrayOfNumber[i], arrayOfNumber.length) + sum;
+    for(let i = 0; i < numberArray.length; i++) {
+        sum = Math.pow(numberArray[i], numberArray.length) + sum;
     }
     return sum === number
 }
