@@ -9,8 +9,6 @@
  * capitalize('a short sentence') === 'A Short Sentence'
  * capitalize('a lazy fox') === 'A Lazy Fox'
  * capitalize('look, it is working!') === 'Look, It Is Working!'
- * 
- * could be improved with map
  */
 
 function capitalize(str: string): string {

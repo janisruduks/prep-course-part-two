@@ -14,8 +14,8 @@
  */
 
 function palindrome(str: string): boolean {
-    const reverse = str.split("").reverse().join("");
-    return reverse === str;
+    const reverseString = str.split("").reverse().join("");
+    return reverseString === str;
 }
 
 export { palindrome };

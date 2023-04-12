@@ -19,7 +19,7 @@ class Queue {
     this.store.push(n)
   }
 
-  remove(): any {
+  remove(): number | undefined {
     return this.store.shift()
   }
 }

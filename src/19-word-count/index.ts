@@ -7,14 +7,7 @@
  *  in: 1
  *  come: 1
  *  free: 1
- * 
- * 
  * https://i.kym-cdn.com/photos/images/original/002/126/528/4fc.jpg
- * 
- * regex \s checks spaces, tabs and new lines
- * filter.(Boolean) so that empty space doesn't count
- * would have used empty object BUT NO, you had to add constructor
- * Object.create(null) blocks inheriting from Object.prototypes
  */
 
 class Words {
