@@ -13,11 +13,11 @@
 
 function validate(number: number): boolean {
     let numberArray = Array.from(number.toString(), Number)
-    let sum = 0
+    let sum = 0;
     for(let i = 0; i < numberArray.length; i++) {
         sum = Math.pow(numberArray[i], numberArray.length) + sum;
     }
-    return sum === number
+    return sum === number;
 }
 
 export { validate };

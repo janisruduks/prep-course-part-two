@@ -54,8 +54,7 @@ class PhoneNumber {
       }else if(phoneNumber.length === 10){}
       else{
         return null;
-      }
-      if(phoneNumber[0] !== "1" && phoneNumber[0] !== "0" 
+      }if(phoneNumber[0] !== "1" && phoneNumber[0] !== "0" 
       && phoneNumber[3] !== "1" && phoneNumber[3] !== "0"){
         return phoneNumber;
       }

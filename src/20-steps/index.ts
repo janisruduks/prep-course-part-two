@@ -21,7 +21,6 @@
 
 function steps(n: number, symbol: string = "#", space: string = " "): void {
     let spaces = n - 1;
-
     for (let i = 0; i < n; i++){
         console.log(symbol.repeat(i + 1) + space.repeat(spaces))
         spaces--;
