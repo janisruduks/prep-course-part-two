@@ -13,9 +13,8 @@ const EVEN_NUMBERS = [0, 2, 4, 6, 8];
 
 function isEven(num: number): Boolean {
     if(!Number.isInteger(num)){
-        num = parseInt(num.toString())
+        num = parseInt(num.toString());
     }
-    
     const evenNumbers = EVEN_NUMBERS.toString()
     let numberString = num.toString();
     numberString = numberString[numberString.length - 1]
