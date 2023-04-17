@@ -11,7 +11,7 @@
  */
 
 function maxChar(str: string): string {
-  let store = 0
+  let store = 0;
   let current = 0;
   let storeString = ""
 

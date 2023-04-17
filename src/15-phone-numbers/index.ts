@@ -33,14 +33,14 @@
  * Note: As this exercise only deals with telephone numbers used in NANP-countries,
  * only 1 is considered a valid country code.
  * 
- * 
+ * /^[2-9]\d{2}[2-9]\d{6}$/ completly ruins my spaghetti code
  */
 
 class PhoneNumber {
   input: string;
   
   constructor(input: string) {
-    this.input = input.replace(/\D/g, '');
+    this.input = input.replace(/\D/g, "");
   }
 
   number(): string | null {
@@ -51,8 +51,8 @@ class PhoneNumber {
     }else {
       if(phoneNumber[0] === "1" && phoneNumber.length === 11) {
         phoneNumber = phoneNumber.substring(1);
-      }else if(phoneNumber.length === 10){}
-      else{
+      }else if(phoneNumber.length === 10) {}
+      else {
         return null;
       }
       if(phoneNumber[0] !== "1" && phoneNumber[0] !== "0" 

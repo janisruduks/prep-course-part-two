@@ -38,10 +38,13 @@
  * https://postimg.cc/dDYY9wFP
  */
 class Matrix {
-  constructor(private matrix: string) {}
+
+  constructor(private matrix: string) {
+    this.matrix = matrix.replace(/\n/g, "  ");
+  }
 
   get rows(): number[][] {
-    const matrixValues = this.matrix.replace(/\n/g, "  ").split(/\s/);
+    const matrixValues = this.matrix.split(/\s/);
 
     const rows: number[][] = [];
     let currentRow: number[] = [];
@@ -54,7 +57,6 @@ class Matrix {
         currentRow = [];
       }
     }
-
     rows.push(currentRow)
     return rows;
   }
@@ -70,7 +72,6 @@ class Matrix {
           columns[columnIndex].push(rows[rowIndex][columnIndex]);
         }
     }
-
     return columns;
   }
 }
